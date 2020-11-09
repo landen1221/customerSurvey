@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="container">
+        
         {% with messages = get_flashed_messages(with_categories=true)%}
         {% if messages %}
-        <section class="messages">
-                {% for category,msg in messages %}
-                    <p class="{{category}}"> {{ msg }} </p>
-                {% endfor %}
-        </section>
+            <div class="alert alert-danger mt-2 p-0 text-center" role="alert">
+                <section class="messages pt-2">
+                    {% for category,msg in messages %}
+                        <p class="{{category}}"> {{ msg }} </p>
+                    {% endfor %}
+                </section>
+            </div>
         {% endif %}
         {% endwith %}
+        
         {% block content %} {% endblock %}
     </div>
 

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title%} Thank-you {% endblock %}
+
+{% block content %} 
+<div class="text-center m-3">
+    <h1>Thank-you for taking our survey!</h1>
+    <h5>Here were your answers</h5>
+    <hr class="col-sm-8">
+    {% for i, j in responses.items() %}
+        <b>Question</b>: {{satisfaction_survey.questions[i].question}}<br>
+        <b>Answer</b>: {{j}}
+        <br><br>
+    {% endfor %}
+    
+    
+</div>    
+{% endblock %}

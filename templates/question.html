@@ -7,31 +7,18 @@
     
     <h1>{{ question }}</h1>
     <br>
-    <!-- <form>
-        <p>Select your answer</p>
-    {% for i in range(length) %}
-        <input type="radio" id={{i}} name=q_{{q_num}}_answer> 
-        <label for="{{i}}"> {{choices[i]}} </label><br>
-    {% endfor %}
-     
-    <hr>
+        
+    <form action="/question/new" method="POST">
+        <p><b>Select your answer</b></p>
     
-    <a href="/question/{{ q_num + 1 }}" class="btn btn-outline-success m-3">Next</a>
-    </form> -->
+    {% for i in range(length) %}
+        <input type="radio" id={{i}} name=q_{{q_num}}_answer value="{{i}}" required> 
+        <label for="{{i}}"> {{choices[i]}} </label><br>
+    {% endfor %} <hr>
 
-    <form action="/question/{{ q_num + 1 }}">
-        <p>Select your answer</p>
-    {% for i in range(length) %}
-        <input type="radio" id={{i}} name=q_{{q_num}}_answer> 
-        <label for="{{i}}"> {{choices[i]}} </label><br>
-    {% endfor %}
-     
-    <hr>
-    
     <button type="submit" value="submit" class="btn btn-outline-success m-3">Next</button>
     </form>
     
-    
-    
+   
 </div>    
 {% endblock %}
