@@ -58,6 +58,7 @@ personality_quiz = Survey(
         Question("Which is the worst function name, and why?",
                  ["do_stuff()", "run_me()", "wtf()"],
                  allow_text=True),
+        Question("Will you code again?")
     ]
 )
 

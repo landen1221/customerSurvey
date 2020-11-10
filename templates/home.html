@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title%} Root {% endblock %}
+{% block title%} Start Survey {% endblock %}
 
 {% block content %} 
 <div class="text-center m-3">
-    <h1>{{ satisfaction_survey.title }}</h1>
-    <h4>{{ satisfaction_survey.instructions }} </h3>
+    <h1 class="m-3">{{ satisfaction_survey.title }}</h1>
+    <h4 id="home-h4">{{ satisfaction_survey.instructions }} </h3>
     
     <a href="/question/0" class="btn btn-outline-success m-3">Start Survey</a>
     
